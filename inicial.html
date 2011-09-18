@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title> Mangiare Bene - Pizzaria</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" style="text/css" href="pizzaria1.css"/>
+	
+    <script type="text/javascript">
+		function validaForm()
+		{
+			var erros = 0;
+			
+			if (document.getElementById("nome").value == '') {
+				erros++;
+			}
+			
+			if (document.getElementById("email").value == '') {
+				erros++;
+			}
+			
+			if (erros == 0) { //Não houve erros, então o formulário está ok
+				alert ("Sua mensagem foi enviada com sucesso!");
+				return true;
+				
+			} else { //Houve erros, pois o valor da variável erros é maior que zero.
+				alert("Todos os campos com * são obrigatórios");
+				return false;
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+
+
+	<!--início div principal-->	
+	<div id="principal">
+
+		<!--inicio div logo-->
+		<div id="logo">
+	
+			<a href="index.html" title="Mangiare Bene"><img src="imagens/logo.png" alt=""/></a>
+
+			<div id="redes_sociais">
+			
+				<a href="http://www.facebook.com" title="facebook"><img src="imagens/logo-face.png" alt=""/></a>
+				<a href="http://twitter.com/" title="twitter"><img src="imagens/logo-twitter.png" alt=""/></a>
+				
+			</div>
+
+		</div><!--fim div logo-->
+	
+		<!--início div menu-->
+		<div id="menu">
+	
+			<ul>
+				<li><a href="index.html" title="home">Home</a></li>
+				<li><a href="pizza_salgada.html" title="cardápio">Cardápio</a>
+					<ul>
+						<li><a href="pizza_salgada.html">Pizzas</a></li>
+						<li><a href="massas.html">Massas</a></li>
+						<li><a href="doces.html">Doces</a></li>
+						<li><a href="vinhos.html">Vinhos</a></li>
+					</ul>
+				</li>
+				<li><a href="pizzaria.html">Pizzaria</a>
+					<ul class="ul2">
+						<li><a href="equipe.html">Equipe </a></li>
+						<li><a href="fotos.html">Fotos</a></li>
+					</ul>
+				</li>
+				<li><a href="evento.html">Eventos</a></li>
+				<li><a href="novidades.html">Novidades</a></li>
+				<li><a href="agenda.html">Agenda</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			
+			</ul>
+	
+		</div><!--fim div menu-->
+
+		<!--início div topo-->
+		<div id="topo">
+		
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="960" height="160"/>
+			<param name="movie" value="banners/banner.swf"/>
+			<param name="quality" value="high"/>
+			<param name="wmode" value="transparent"/>
+			<embed src="banners/banner.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="960" height="160"></embed></object>
+		
+		</div><!--fim div topo-->
+		
+	
+		<!--início div conteúdo-->
+		<div id="conteudo">
+		
+			<!--início div newsletters-->	
+			<div id="newsletters">
+				
+				<h3>Receba a nossa Newsletter</h3>
+				<form id="form_newsletter" onsubmit="return validaForm();" action="" method="post" >
+					<fieldset>
+						<label for="nome">Nome<span class="asterisco">*</span></label>
+						<input id="nome" name="nome" type="text" />
+						<label for="email">Email<span class="asterisco">*</span></label>
+						<input id="email" name="email" type="text" /><br/>
+						<button type="submit">Enviar</button>
+					</fieldset>
+				</form>
+					
+			</div><!-- fim da div newsletters--> 
+		
+			<!--início div esquerda conteúdo-->
+			<div id="esquerdaconteudo">
+			
+				<h1>Promoções</h1>
+			
+				<p>Na pizzaria Mangiare Bene há para cada dia da semana uma promoção diferente.  <span class="especial">Temos desconto para estudantes, rodízio com preços especiais, </span>entre outros.<br/>Confira nossa <a href="agenda.html" title="agenda">agenda</a> e escolha a promoção que mais se identifica com você.</p>
+				
+			</div><!--fim div esquerda conteúdo-->
+			
+			<!--início div direita conteúdo-->
+			<div id="direitaconteudo">
+			
+				<h1>Novos sabores</h1>
+				<p>Em agosto a Mangiare Bene lançou quatro sabores de pizzas diferentes com ingredientes inusitados e delíciosos: <span class="especial">Cenoura com ricota, sorvete e ostras</span>, além da especial,<span class="especial"> Do Cheff, </span>com<span class="especial"> frango xadrez.</span><br/>Veja mais em nosso <a href="pizzas_salgadas"> cardápio</a>.</p>
+			
+			</div><!--fim div direita conteúdo-->	
+			
+
+				<div id="imagens">
+					<h1>Aqui você encontra variedade e qualidade em um só lugar</h1>
+					<a href="pizza_salgada.html"><img src="imagens/pizza.png" alt=""/></a>
+					<a href="massas.html"><img src="imagens/massas.png" alt=""/></a>
+					<a href="doces.html"><img src="imagens/doces1.png" alt=""/></a>
+					<a href="vinhos.html"><img src="imagens/adega.png" alt=""/></a>
+				</div>
+			
+			
+		</div><!-- fim da div conteudo-->		
+		
+		<!--início div rodapé 1 (Contém o endereço!)-->
+		<div id="rodape1">
+		
+			<div id="div_email">
+			
+				<p class="pemail">Av. Adoro Comer Pizza, 000 | Florianópolis | SC</p>
+				<p class="pemail2">(48) 3333 - 0000</p>
+				<p class="pemail"><a href="mailto:mangiarebene@gmail.com">mangiarebene@gmail.com</a></p>
+			
+			</div>
+	
+		</div><!--fim div rodapé 1-->
+	
+	</div><!--fim div principal-->
+	
+		
+	<!--início div rodapé-->
+	<div id="rodape">
+		
+		<div id="copy">
+			<p class="pcopy">copyright©2011 Mangiare Bene - todos os direitos reservados</p>
+		</div>
+	
+	</div><!--fim div rodapé-->
+		
+</body>
+</html>
