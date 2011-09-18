@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title> Mangiare Bene - Pizzaria</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" style="text/css" href="pizzaria.css"/>
+	<script src="jquery.js" type="text/javascript"></script>
+	
+        <script type="text/javascript">
+			$(function(){
+				$("#formcontato").submit(function(){
+					var erros = "0";
+					
+					var nome = $("#nome").val();
+						if (nome === ""){
+							erros++;
+						}
+						
+					var email = $("#email").val();
+						if (email === ""){
+							erros++;
+						}
+
+						if ($("#opcao").val() === "1"){
+							erros++;
+						}
+					
+					var mensagem = $("#mensagem").val();				
+						if (mensagem === ""){
+						erros++;
+						}
+					
+					if (erros === "0") { //Não houve erros, então o formulário está ok
+						alert("Sua mensagem foi enviada com sucesso!");
+						return true;
+						 
+					} else { //Houve erros, pois o valor da variável erros é maior que zero
+						alert("Todos os campos com * são obrigatórios");
+						return false;
+					}
+				});
+			});
+		</script>
+	
+</head>
+
+<body>
+
+	<!--início div principal-->	
+	<div id="principal">
+
+		<!--inicio div logo-->
+		<div id="logo">
+	
+			<a href="index.html" title="Mangiare Bene"><img src="imagens/logo.png" alt=""/></a>
+			
+			<div id="redes_sociais">
+			
+				<a href="http://www.facebook.com" title="facebook"><img src="imagens/logo-face.png" alt=""/></a>
+				<a href="http://twitter.com/" title="twitter"><img src="imagens/logo-twitter.png" alt=""/></a>
+				
+			</div>
+			
+		</div><!--fim div logo-->
+	
+		<!--início div menu-->
+		<div id="menu">
+	
+			<ul>
+				<li><a href="index.html" title="home">Home</a></li>
+				<li><a href="pizza_salgada.html" title="cardápio">Cardápio</a>
+					<ul>
+						<li><a href="pizza_salgada.html">Pizzas</a></li>
+						<li><a href="massas.html">Massas</a></li>
+						<li><a href="doces.html">Doces</a></li>
+						<li><a href="vinhos.html">Vinhos</a></li>
+					</ul>
+				</li>
+				<li><a href="pizzaria.html">Pizzaria</a>
+					<ul class="ul2">
+						<li><a href="equipe.html">Equipe </a></li>
+						<li><a href="fotos.html">Fotos</a></li>
+					</ul>
+				</li>
+				<li><a href="evento.html">Eventos</a></li>
+				<li><a href="novidades.html">Novidades</a></li>
+				<li><a href="agenda.html">Agenda</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			
+			</ul>
+	
+		</div><!--fim div menu-->
+		
+	
+		<!--início div conteúdo-->
+		<div id="conteudo">
+			
+			<h5>Contato</h5>
+		
+				<!--início div formcontato-->
+				<div id="formcontato">
+					
+					<form id="form_contato" action="" method="post">
+						
+						<fieldset>
+								
+								<p class="campo_obrigatorio">Todos os campos com <span class="asterisco">*</span> são obrigatórios</p>
+							
+								<label for="nome">Nome<span class="asterisco">*</span></label>
+								<input id="nome" type="text" name="nome" size="30" maxlength="100"/>
+						
+								<label for="email">Email<span class="asterisco">*</span></label>
+								<input id="email" type="text" name="email" size="30" maxlength="50"/>
+
+							   <label for="opcao">Assunto<span class="asterisco">*</span></label>						
+								<select id="opcao">
+									<option id="escolha" value="1">Escolha...</option>
+									<option id="elogio">Elogio</option>
+									<option id="reclamacao">Reclamação</option>
+									<option id="sugestao">Sugestão</option>
+									<option id="outros">Outros</option>
+								</select>
+
+								<label for="mensagem">Mensagem<span class="asterisco">*</span> </label>
+								<textarea id="mensagem" name="mensagem" rows="5" cols="25"></textarea>
+						
+								<button type="submit">Enviar</button>
+							
+						</fieldset>
+						
+					</form>
+					
+				</div><!--fim div formcontato-->
+
+				<!--início div direita conteúdo contato-->
+				<div id="direitaconteudo_contato">
+				
+					<iframe width="550" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+					src="http://maps.google.com.br/maps/ms?msa=0&amp;msid=212918292462835400476.0004a952e8b115d62a502&amp;ie=UTF8&amp;ll=-27.591133,-48.551792&amp;spn=0,0&amp;output=embed"></iframe>
+					<br /><small>Visualizar <a href="http://maps.google.com.br/maps/ms?msa=0&amp;msid=212918292462835400476.0004a952e8b115d62a502&amp;ie=UTF8&amp;ll=-27.591133,-48.551792&amp;spn=0,0&amp;source=embed"
+					style="text-align:left">Mangiare Bene</a> em um mapa maior</small>
+				
+				</div><!--fim div direita conteúdo contato-->	
+				
+				<!--início div base-->
+				<div id="base">
+			
+					<span class="pagamento">Formas de pagamento</span>
+			
+					<img src="imagens/formasdepgto.png" alt=""/>
+			
+				</div><!--fim div esquerda base-->	
+				
+		</div><!--fim div conteúdo-->
+		
+		<!--início div rodapé 1 (Contém o endereço!)-->
+		<div id="rodape1">
+		
+			<div id="div_email">
+			
+				<p class="pemail">Av. Adoro Comer Pizza, 000 | Florianópolis | SC</p>
+				<p class="pemail2">(48) 3333 - 0000</p>
+				<p class="pemail"><a href="mailto:mangiarebene@gmail.com">mangiarebene@gmail.com</a></p>
+			
+			</div>
+	
+		</div><!--fim div rodapé 1-->
+	
+	</div><!--fim div principal-->
+	
+		
+	<!--início div rodapé-->
+	<div id="rodape">
+		
+		<div id="copy">
+			<p class="pcopy">copyright©2011 Mangiare Bene - todos os direitos reservados</p>
+		</div>
+	
+	</div><!--fim div rodapé-->
+		
+</body>
+</html>
